@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huntingt phone API</title>
+
+
+    <!-- tailwind and daisyui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <!-- custom css -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f8fafc, #ffffff);
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <header class="w-4/5 mx-auto">
+        <div class="mx-auto">
+            <div class="justify-between flex my-4 sm:my-6 md:my-16 md:w-4/5 mx-auto">
+                <a class="text-lg sm:text-xl md:text-2xl font-bold p-2 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent hover:from-gray-800 hover:to-gray-600 transition-all duration-300"
+                    href="Home">Elegant Gadgets</a>
+                <button
+                    class="btn text-white text-sm sm:text-base md:text-lg bg-gradient-to-r from-gray-900 to-gray-800 hover:from-gray-800 hover:to-gray-700 border-none px-3 sm:px-4 md:px-10 transition-all duration-300 shadow-lg hover:shadow-xl">Sign
+                    Up</button>
+            </div>
+            <div class="text-center mx-auto md:w-4/5">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold my-4 sm:my-6 md:my-10 bg-gradient-to-r from-black to-gray-800 bg-clip-text text-transparent">Apple Iphone 13 Pro Max
+                </h1>
+                <p class="text-xs sm:text-sm md:text-base px-2 sm:px-4 md:px-0 text-gray-600 leading-relaxed">There are many variations
+                    of passages of Lorem Ipsum
+                    available, but the majority have suffered
+                    alteration in some form, by injected humou.</p>
+                <button
+                    class="btn text-white bg-gradient-to-r from-gray-900 to-gray-800 hover:from-gray-800 hover:to-gray-700 border-none my-4 sm:my-6 md:my-10 px-6 sm:px-8 md:px-16 transition-all duration-300 shadow-lg hover:shadow-xl">Buy
+                    now</button>
+
+                <!-- Hero Slider -->
+                <div
+                    class="carousel w-full mx-auto h-[250px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden">
+                    <div id="slide1" class="carousel-item relative w-full bg-[#f6f5f8]">
+                        <img src="./images/phone.svg"
+                            class="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-300"
+                            alt="Phone showcase 1" />
+                        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                            <a href="#slide4"
+                                class="btn btn-circle border-none shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300">❮</a>
+                            <a href="#slide2"
+                                class="btn btn-circle border-none shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide2" class="carousel-item relative w-full bg-[#f6f5f8]">
+                        <img src="./images/iphones.webp"
+                            class="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-300"
+                            alt="Phone showcase 2" />
+                        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                            <a href="#slide1"
+                                class="btn btn-circle border-none shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300">❮</a>
+                            <a href="#slide3"
+                                class="btn btn-circle border-none shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide3" class="carousel-item relative w-full bg-[#fafafa]">
+                        <img src="./images/apple watch.jpg"
+                            class="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-300"
+                            alt="Phone showcase 3" />
+                        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                            <a href="#slide2"
+                                class="btn btn-circle border-none shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300">❮</a>
+                            <a href="#slide4"
+                                class="btn btn-circle border-none shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide4" class="carousel-item relative w-full bg-[#f6f5f8]">
+                        <img src="./images/iphone-16-pro-model-unselect-gallery-1-202409.webp"
+                            class="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-300"
+                            alt="Phone showcase 4" />
+                        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                            <a href="#slide3"
+                                class="btn btn-circle border-none shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300">❮</a>
+                            <a href="#slide1"
+                                class="btn btn-circle border-none shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300">❯</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Hero Slider -->
+            </div>
+        </div>
+    </header>
+
+
+
+    <main class="container mx-auto mt-4">
+
+        <!-- welcome -->
+        <section id="welcomeX" class="h-screen flex items-center justify-center hidden" id="welcomeSection">
+            <!-- Loading Animation -->
+            <div id="loadingSpinner" class="fixed inset-0 flex items-center justify-center bg-gradient-to-r from-blue-50 to-white z-50">
+                <div class="flex flex-col items-center gap-6">
+                    <span class="loading loading-infinity loading-lg text-blue-600 w-24"></span>
+                    <p class="text-2xl font-semibold text-blue-600 animate-pulse">Loading</p>
+                </div>
+            </div>
+
+            <!-- Hello Message (Displayed after loading) -->
+            <div id="helloMessage" class="fixed inset-0 hidden items-center justify-center bg-gradient-to-r from-blue-50 to-white z-50">
+                <div class="text-center space-y-6 transform transition-all duration-700 scale-0" id="welcomeContent">
+                    <h1 class="text-7xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent animate-bounce">Hello :)</h1>
+                    <p class="text-gray-600 text-2xl font-medium animate-pulse">Welcome to our Phone Store</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- phone section  -->
+        <section id="phoneX" class="w-[95%] md:w-4/5 mx-auto p-4">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold text-center bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">Search your phone</h1>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-0 my-4 sm:my-6 md:my-10">
+                <input id="search-field" type="text" placeholder="Search..."
+                    class="input input-bordered w-full max-w-xs focus:border-gray-600 focus:ring-2 focus:ring-gray-200 transition-all backdrop-blur-sm bg-white/80 rounded-r-none sm:w-72" />
+                <button onclick="handleSearch()"
+                    class="btn bg-gray-900 hover:bg-gray-800 text-white w-full sm:w-auto transition-all shadow-lg hover:shadow-xl rounded-l-none sm:px-8">Search</button>
+            </div>
+        </section>
+
+        <!-- loading section  -->
+        <section>
+            <div id="loadingIcon" class="text-center my-12 sm:my-20 md:my-40 hidden">
+                    
+            </div>
+        </section>
+
+        <!-- phone card section  -->
+        <section id="phoneCardX" class="w-4/5 lg:w-4/5 mx-auto px-2 sm:px-4 md:px-0">
+            <div id="phone-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            </div>
+            <!-- show more button  -->
+            <div id="show-all-container" class="hidden mx-auto text-center my-4 sm:my-6 md:my-24">
+                <button onclick="handleShowAll()"
+                    class="btn bg-gray-900 hover:bg-gray-800 text-white w-full sm:w-auto md:px-16 transition-all shadow-lg hover:shadow-xl">Show
+                    more</button>
+                    
+            </div>
+        </section>
+
+        <!-- details section  -->
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <h3 id="show-details-phone-name" class="font-bold text-xl sm:text-2xl md:text-3xl text-center"></h3>
+                <div id="show-details-container" class="py-4">
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn hover:bg-blue-600 hover:text-white transition-colors">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+    </main>
+
+    <!-- footer  -->
+    <footer id="footerX" class="footer text-gray-800 p-4 sm:p-6 md:p-10 w-[95%] mx-auto mt-12 sm:mt-16 md:mt-24">
+        <div class="mx-auto px-2 sm:px-4 w-[95%] md:w-4/5">
+            <div class="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8 w-full gap-4 sm:gap-6">
+                <!-- Title and Description -->
+                <div class="text-center sm:text-left">
+                    <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">Hot Gadgets</h2>
+                    <p class="text-gray-500 text-sm sm:text-base">You can definitely work.</p>
+                </div>
+                <!-- Social Media Icons and Join Premium Button -->
+                <div class="flex items-center gap-4">
+                    <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors text-3xl">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-blue-400 transition-colors text-3xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-pink-500 transition-colors text-3xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#"
+                        class="btn bg-gray-900 hover:bg-gray-800 text-white sm:w-auto md:px-10 transition-all shadow-lg hover:shadow-xl">
+                        Join Premium
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-evenly mx-auto w-full">
+                <div
+                    class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center sm:text-left justify-evenly w-full">
+                    <!-- Product Section -->
+                    <nav>
+                        <h6 class="text-sm sm:text-base md:text-lg font-semibold text-gray-900">Product</h6>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">Browse
+                            jobs</a>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">Remote
+                            jobs</a>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">Startup
+                            jobs</a>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">Company
+                            jobs</a>
+                    </nav>
+
+                    <!-- Popular Section -->
+                    <nav>
+                        <h6 class="text-sm sm:text-base md:text-lg font-semibold text-gray-900">Popular</h6>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">UI/UX
+                            Design</a>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">Product
+                            Design</a>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">Back-End
+                            Developer</a>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">Front-End
+                            Developer</a>
+                    </nav>
+
+                    <!-- Resource Section -->
+                    <nav>
+                        <h6 class="text-sm sm:text-base md:text-lg font-semibold text-gray-900">Resource</h6>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">FAQ</a>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">Support</a>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">Privacy
+                            Policy</a>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">Terms
+                            of Service</a>
+                    </nav>
+
+                    <!-- Company Section -->
+                    <nav>
+                        <h6 class="text-sm sm:text-base md:text-lg font-semibold text-gray-900">Company</h6>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">About
+                            Us</a>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">Contact
+                            Us</a>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">Career
+                            Tips</a>
+                        <a href="#"
+                            class="block text-xs sm:text-sm md:text-base text-gray-500 hover:text-blue-600 transition-colors">Careers</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./scripts/phone.js"></script>
+    <script src="./scripts/slider.js"></script>
+    <script src="./node_modules/preline/dist/preline.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@1.4.0/dist/flowbite.min.js"></script>
+</body>
+
+</html>
