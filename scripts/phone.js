@@ -15,10 +15,11 @@ const displayPhones = (phones, isShowAll) => {
   }
 
   const showAll = document.getElementById('show-all-container')
-  if (phones.length > 4 && !isShowAll) {
+  if (phones.length <= 4) {
+    showAll.classList.add('hidden')
+  } else if (!isShowAll) {
     showAll.classList.remove('hidden')
-  }
-  else {
+  } else {
     showAll.classList.add('hidden')
   }
 
@@ -26,7 +27,7 @@ const displayPhones = (phones, isShowAll) => {
     phones = phones.slice(0, 4)
   }
 
-  phoneContainer.classList = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto'
+  phoneContainer.classList = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto sm:w-[90%] sm:mx-auto'
 
   phones.forEach(phone => {
     const phoneCard = document.createElement('div')
@@ -38,8 +39,8 @@ const displayPhones = (phones, isShowAll) => {
         <div class="p-6 md:p-8 flex flex-col h-[calc(100%-250px)]">
           <h2 class="text-[#1d1d1f] text-xl md:text-2xl font-semibold mb-3">${phone.phone_name}</h2>
           <div class="relative flex-grow mb-4">
-            <p class="text-[#86868b] text-sm md:text-base leading-relaxed line-clamp-3">Experience innovation at your fingertips with cutting-edge technology and exceptional design. This device showcases the perfect blend of style and functionality, offering an unparalleled mobile experience.</p>
-            <button onclick="toggleReadMore(this)" class="text-[#0071e3] text-sm hover:underline mt-1">Read more</button>
+            <p class="text-[#86868b] text-sm md:text-base leading-relaxed line-clamp-3 transition-all duration-300">Experience innovation at your fingertips with cutting-edge technology and exceptional design. This device showcases the perfect blend of style and functionality, offering an unparalleled mobile experience.</p>
+            <button onclick="toggleReadMore(this)" class="text-[#0071e3] text-sm hover:underline mt-1 transition-all duration-300">Read more</button>
           </div>
           <div class="flex flex-col gap-4 mt-auto">
             <p class="text-[#1d1d1f] text-lg md:text-xl font-medium">From $999</p>
@@ -59,10 +60,14 @@ const displayPhones = (phones, isShowAll) => {
 
 const toggleReadMore = (button) => {
   const paragraph = button.previousElementSibling;
+  const originalHeight = paragraph.scrollHeight;
+  
   if (paragraph.classList.contains('line-clamp-3')) {
+    paragraph.style.height = originalHeight + 'px';
     paragraph.classList.remove('line-clamp-3');
     button.textContent = 'Read less';
   } else {
+    paragraph.style.height = '4.5em';
     paragraph.classList.add('line-clamp-3');
     button.textContent = 'Read more';
   }
